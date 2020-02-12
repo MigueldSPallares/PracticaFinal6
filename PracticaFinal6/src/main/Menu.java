@@ -7,6 +7,7 @@ public class Menu {
 	public int pintaMenu() {
 		int opc = 0;
 		Scanner leer = new Scanner (System.in);
+		//Aquí se crea un menú que solo admite valores entre el 1 y el 8
 		do {
 			try {
 				System.out.println("1- Ver todos los agentes con su información");
