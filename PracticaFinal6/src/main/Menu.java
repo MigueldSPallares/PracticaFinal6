@@ -25,4 +25,20 @@ public class Menu {
 		}while(opc<1 || opc>8);
 		return opc;
 	}
+	
+	public int pintaMenu2() {
+		int opc = 0;
+		Scanner leer = new Scanner (System.in);
+		do{
+			try {
+				System.out.println("1- Jefazo o superintendente");
+				System.out.println("2- Agente de espionaje");
+				System.out.println("3- Agente 007");
+				opc = leer.nextInt();
+			}catch (Exception e) {
+				
+			}
+		}while(opc<1||opc>3);
+		return opc;
+	}
 }

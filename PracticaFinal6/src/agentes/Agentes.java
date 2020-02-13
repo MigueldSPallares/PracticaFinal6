@@ -47,6 +47,7 @@ public abstract class Agentes {
 
 	@Override
 	public String toString() {
-		return "nombre= " + nombre + "- edad= " + edad + "- direccion= " + direccion + "- salario= " + salario;
+		return "\nNombre:" + nombre + "\nEdad: " + edad 
+			+ "\nDirección: " + direccion +"\nSalario: " + salario;
 	}
 }

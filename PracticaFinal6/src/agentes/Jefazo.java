@@ -18,8 +18,7 @@ public final class Jefazo extends Agentes{
 
 	@Override
 	public String toString() {
-		return "************************************\nNombre:" + nombre + "\nEdad: " + edad 
-				+ "\nDirección: " + direccion +"\nSalario: " + salario + "\nAños de mandato: "
+		return "************************************\n" + super.toString() + "\nAños de mandato: "
 				+ añosMandato + "\n************************************";
 	}
 	
