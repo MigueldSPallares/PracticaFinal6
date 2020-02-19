@@ -1,6 +1,8 @@
 package agentes;
 
-public abstract class Agentes {
+import java.io.Serializable;
+
+public abstract class Agentes implements Serializable{
 	protected String nombre;
 	protected int edad;
 	protected String direccion;
@@ -47,7 +49,7 @@ public abstract class Agentes {
 
 	@Override
 	public String toString() {
-		return "\nNombre:" + nombre + "\nEdad: " + edad 
+		return "Nombre:" + nombre + "\nEdad: " + edad 
 			+ "\nDirección: " + direccion +"\nSalario: " + salario;
 	}
 }

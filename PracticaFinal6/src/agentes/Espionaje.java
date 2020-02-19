@@ -15,7 +15,13 @@ public final class Espionaje extends Agentes{
 	}
 	@Override
 	public String toString() {
-		return super.toString() + " \nPisos:" + Arrays.toString(pisos);
+		String vPisos= "";
+		for (String p : pisos) {
+			if(p!=null) {
+				vPisos += p + ", ";
+			}
+		}
+		return super.toString() + " \nPisos:" + vPisos;
 	}
 	
 }

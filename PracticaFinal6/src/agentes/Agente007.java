@@ -15,7 +15,14 @@ public final class Agente007 extends Agentes{
 	}
 	@Override
 	public String toString() {
-		return super.toString() + "\nnumMuertos: " + numMuertos + "\narmas=" + Arrays.toString(armas);
+		String vArmas = "";
+		for (String a : armas) {
+			if(a!=null) {
+				vArmas += a + ", ";
+			}
+		}
+		
+		return super.toString() + "\nnumMuertos: " + numMuertos + "\narmas=" + vArmas;
 	}
 	
 }

@@ -96,35 +96,53 @@ public class Principal {
 							System.out.println(agentes.toString());
 						}
 					}
+				}else {
+					System.out.println("El programa está encriptado");
 				}
 				break;
 			case 2:
 				if(!encriptado) {
 					salarioMayorQue(vAgente);
+				}else {
+					System.out.println("El programa está encriptado");
 				}
 				break;
 			case 3:
 				if(!encriptado) {
 					iodatos.guardarPiso();
+				}else {
+					System.out.println("El programa está encriptado");
 				}
 				break;
 			case 4:
 				if(!encriptado) {
 					iodatos.guardarArma();
+				}else {
+					System.out.println("El programa está encriptado");
 				}
 				break;
 			case 5:
 				if(!encriptado) {
 					nuevoAgente(vAgente);
+				}else {
+					System.out.println("El programa está encriptado");
 				}
 				break;
 			case 6:
 				if(!encriptado) {
-					
+					iodatos.encriptar(vAgente);
+				}else {
+					System.out.println("El programa está encriptado");
 				}
+				encriptado = true;
 				break;
 			case 7:
-				
+				if(encriptado) {
+					iodatos.desencriptar(vAgente);
+				}else {
+					System.out.println("El programa no está encriptado");
+				}
+				encriptado = false;
 				break;
 			case 8:
 				System.out.println("Saliendo");
