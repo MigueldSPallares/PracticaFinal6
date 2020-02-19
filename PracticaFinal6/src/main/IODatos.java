@@ -30,7 +30,7 @@ public class IODatos {
 				e.printStackTrace();
 			}
 		}
-
+		//Se crea el fichero si no existe
 		PrintWriter escribir;
 		FileWriter f;
 		try {
@@ -61,7 +61,7 @@ public class IODatos {
 				e.printStackTrace();
 			}
 		}
-
+		//Se almacenan todos los pisos del fichero
 		try {
 			leer = new Scanner(fichero);
 			while (leer.hasNextLine()) {
@@ -87,6 +87,7 @@ public class IODatos {
 		String arma = "";
 		File fichero = new File(ruta2);
 		Scanner leer = new Scanner(System.in);
+		//Se crea el fichero si no existe
 		if (!fichero.exists()) {
 			try {
 				fichero.createNewFile();
@@ -126,7 +127,7 @@ public class IODatos {
 				e.printStackTrace();
 			}
 		}
-
+		//Se almacenan todas las armas del fichero
 		try {
 			leer = new Scanner(fichero);
 			while (leer.hasNextLine()) {
@@ -156,12 +157,14 @@ public class IODatos {
 		File fic2 = new File(ruta2);
 		String[] arma = cargarArma();
 		String[] piso = cargarPiso();
+		//Aquí se borran los ficheros
 		if (fic1.delete()) {
 			System.out.println("Se ha borrado el fichero");
 		}
 		if (fic2.delete()) {
 			System.out.println("Se ha borrado el fichero");
 		}
+		//Aquí se crean los ficheros encriptados si no existen
 		if (!fichero1.exists()) {
 			try {
 				fichero1.createNewFile();
@@ -186,6 +189,7 @@ public class IODatos {
 				e.printStackTrace();
 			}
 		}
+		//Aquí se escriben los ficheros
 		try {
 			FileOutputStream fo1 = new FileOutputStream(fichero1);
 			DataOutputStream escribir1 = new DataOutputStream(fo1);
@@ -226,6 +230,7 @@ public class IODatos {
 		File fic3 = new File("datos/Agentes.txt");
 		File fichero1 = new File(ruta2);
 		File fichero2 = new File(ruta);
+		//Aquí se guarda el fichero encriptado que no se pasará a fichero de texto
 		if (fic3.delete()) {
 			System.out.println("Se ha borrado el fichero");
 		}
@@ -239,6 +244,7 @@ public class IODatos {
 		PrintWriter escribir1 = null;
 		FileWriter fi2 = null;
 		PrintWriter escribir2 = null;
+		//Se crean los dos ficheros de texto si no existen
 		if (!fichero1.exists()) {
 			try {
 				fichero1.createNewFile();
@@ -255,6 +261,7 @@ public class IODatos {
 				e.printStackTrace();
 			}
 		}
+		//En los dos primeros try-catch, la información desencriptada se guarda en vectores
 		try {
 			f1 = new FileInputStream(fic1);
 			leer1 = new DataInputStream(f1);
@@ -298,6 +305,7 @@ public class IODatos {
 				e.printStackTrace();
 			}
 		}
+		//En los dos siguentes try-catch se escriben los nuevos ficheros
 		try {
 			fi1 = new FileWriter(fichero1, true);
 			escribir1 = new PrintWriter(fi1);

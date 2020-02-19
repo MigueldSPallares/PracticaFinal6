@@ -29,6 +29,7 @@ public class Menu {
 	public int pintaMenu2() {
 		int opc = 0;
 		Scanner leer = new Scanner (System.in);
+		//Aquí se crea el menú de los distintos tipos de agentes
 		do{
 			try {
 				System.out.println("1- Jefazo o superintendente");

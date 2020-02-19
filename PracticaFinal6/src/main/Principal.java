@@ -41,6 +41,7 @@ public class Principal {
 		salario = leer.nextDouble();
 		System.out.println("¿Qué tipo de agente es?");
 		opc = menu.pintaMenu2();
+		//Se decide qué tipo de agente es
 		switch(opc) {
 		case 1:
 			System.out.println("Pon los años que está en mandato");
